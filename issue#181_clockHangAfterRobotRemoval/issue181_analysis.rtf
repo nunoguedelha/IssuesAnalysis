@@ -38,7 +38,7 @@ Closing Server Inertial...
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 \cf0 \
 => Gazebo time in the Client is then freezed\
-=> you can still run (in another terminal) the clock plugin roc interface (> yard roc /clock/rpc) :\
+=> you can still run (in another terminal) the clock plugin rpc interface (> yarp roc /clock/rpc) :\
         pauseSimulation, continueSimulation, stepSimulation, resetSimulation have no effect on the simulator\
         getSimulationTime, getStepSize still return respective gazebo parameters (returns always the same freezed gazebo time) \
 \
@@ -73,10 +73,6 @@ Closing Server Inertial...
 \b0 \
 \
 Pause the execution of \'93gzserver\'94 through GazeboYarpPlugins project interface. We can than see in the Debug navigator of Xcode the backtrace of all the running threads.\
-\
-
-\i\b gzsrver threads\'85
-\i0\b0 \
 \
 thread 1 is in an infinite loop, closing the IMU. Below, the function call tree :\
 	=> GazeboYarpIMU::~GazeboYarpIMU()\
